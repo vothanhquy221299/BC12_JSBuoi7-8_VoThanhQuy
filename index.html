@@ -1,35 +1,85 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>EX_JS_Buoi7-8</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  </head>
-  <body>
-    <div class="container">
-        <h1 class="text-center mb-4">JAVA SCRIPT BUỔI 7 + 8</h1>
-    <label>Nhập vào một dãy số nguyên được phân tách nhau bởi dấu cách (' ')</label>
+<head>
+  <title>EX_JS_Buoi7-8</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">JAVA SCRIPT BUỔI 7 + 8</h1>
+    <div class="row mb-5">
+    <label>Nhập vào một dãy các số nguyên được phân tách nhau bởi dấu cách (' ')</label>
     <input type="text" class="form-control" id="ipNumber">
+  </div>
     <h3>Bài 1: Tổng các số dương trong mảng</h3>
     <div class="row">
-        <div class="col-4">
-            <button type="button" class="btn btn-warning" id="btnTinhTong">Tính tổng</button>
-        </div>
-        <div class="col-5" >
-            <h4 id="kqTinhTong" ></h4>
-        </div>
+      <div class="col-4">
+        <button type="button" class="btn btn-warning" id="btnTinhTong">Tính tổng</button>
+      </div>
+      <div class="col-5">
+        <h4 id="kqTinhTong"></h4>
+      </div>
     </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <script src="./main.js"></script>
-  </body>
+    <hr>
+    <h3>Bài 2: Đếm có bao nhiêu số dương trong mảng</h3>
+    <div class="row">
+      <div class="col-4">
+        <button type="button" class="btn btn-warning" id="btnDem">Đếm số dương</button>
+      </div>
+      <div class="col-5">
+        <h4 id="kqDem"></h4>
+      </div>
+    </div>
+
+    <hr>
+    <h3>Bài 3: Tìm số nhỏ nhất trong mảng</h3>
+    <div class="row">
+      <div class="col-4">
+        <button type="button" class="btn btn-warning" id="btnSoNhoNhat">Số nhỏ nhất</button>
+      </div>
+      <div class="col-5">
+        <h4 id="kqSoNhoNhat"></h4>
+      </div>
+    </div>
+
+    <hr>
+    <h3>Bài 4: Tìm số dương nhỏ nhất trong mảng</h3>
+    <div class="row">
+      <div class="col-4">
+        <button type="button" class="btn btn-warning" id="btnSoDuongNN">Số dương nhỏ nhất</button>
+      </div>
+      <div class="col-5">
+        <h4 id="kqSoDuongNN"></h4>
+      </div>
+    </div>
+
+    <hr>
+    <h3>Bài 5: Tìm số chẵn cuối cùng trong mảng</h3>
+    <div class="row">
+      <div class="col-4">
+        <button type="button" class="btn btn-warning" id="btnSoChanCC">Số chẵn cuối cùng</button>
+      </div>
+      <div class="col-5">
+        <h4 id="kqSoChanCC"></h4>
+      </div>
+    </div>
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="./main.js"></script>
+</body>
+
 </html>
