@@ -57,11 +57,8 @@ var timSoDuongNhoNhat = function(){
     return minSoDuong;
 }
 var timSoChanCuoiCung = function(){
-    debugger
-    debugger
-    // var arr = catChuoi();
-    // var soChan = 0;
-    var arr = [10, 20, 8]
+    var arr = catChuoi();
+    var soChan = 0;
     for(var i= arr.length-1; i >= 0; i--){
         if(parseInt(arr[i]) %2 == 0){
             return arr[i];
@@ -69,8 +66,47 @@ var timSoChanCuoiCung = function(){
         return -1;
     }
 }
-var sc = timSoChanCuoiCung();
-console.log(sc);
+var inMang = function(){
+    var arr = catChuoi();
+    var mang = '';
+    for(var i=0; i<arr.length; i++){
+        mang += arr[i] + ' ';
+    }
+    return mang;
+}
+var doiChoHaiViTri = function(){
+    var viTri1 = document.getElementById('ipViTri1').value;
+    var viTri2 = document.getElementById('ipViTri2').value;
+    var arr = catChuoi();
+    var tmp = arr[viTri1];
+    arr[viTri1] = arr[viTri2];
+    arr[viTri2] = tmp;
+    mangMoi = '';
+    for(var i=0; i<arr.length; i++){
+        mangMoi += arr[i] + ' ';
+    } 
+    return mangMoi; 
+}
+
+var sapXepTangDan = function(){
+    var arr = catChuoi(); 
+    for(var i = 0; i < arr.length - 1; i++){
+        for(var j = i + 1; j < arr.length; j++){
+            if(arr[i] > arr[j]){
+                tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;        
+            }
+        }
+    }
+    var mangMoi = '';
+    for(var i=0; i<arr.length; i++){
+        mangMoi += arr[i] + ' ';
+    } 
+    console.log(mangMoi)
+    return mangMoi; 
+}
+
 /*
  *Bài 1 
  */
@@ -121,6 +157,34 @@ document.getElementById('btnSoNhoNhat').addEventListener('click', function(){
     var kqSoChanCC = document.getElementById('kqSoChanCC');
     kqSoChanCC.innerHTML = 'Số chẵn cuối cùng trong mảng là: ' + soChanCC;
 })
+
+/**
+ * Bài 6
+ */
+document.getElementById('btnDoiCho').addEventListener('click', function(){
+    var doiViTri = doiChoHaiViTri();
+    var inMangCu = inMang();
+
+    var kqDoiCho = document.getElementById('kqDoiCho');
+    var kqMang = document.getElementById('kqMang');
+    kqMang.innerHTML = 'Mảng của bạn là: ' + inMangCu;
+    kqDoiCho.innerHTML = 'Mảng sau khi được đổi 2 vị trí là: ' + doiViTri;
+})
+
+/**
+ * Bài 7
+ */
+document.getElementById('btnSapXep').addEventListener('click', function(){
+    var _sapXepTangDan = sapXepTangDan();
+    var mangHienTai = inMang();
+
+    var kqSapXep = document.getElementById('kqSapXep');
+    var kqMangHienTai = document.getElementById('kqMangHienTai');
+    kqMangHienTai.innerHTML = 'Mảng của bạn là: ' + mangHienTai;
+    kqSapXep.innerHTML = 'Mảng được sắp xếp theo thứ tự tăng dần là: ' + _sapXepTangDan;
+})
+
+
 
 
 
